@@ -1,0 +1,41 @@
+﻿@model ComputerOnlineStorage.Models.Category
+
+@{
+    ViewBag.Title = "Удаление категорий";
+}
+
+@*<h2>Изменение категории</h2>
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            @Html.HiddenFor(m => m.CategoryId)
+            <p>
+                @Html.LabelFor(m => m.ParentCategory, "Родительская категория")
+                <br />
+                @Html.EditorFor(m => m.ParentCategory)
+            </p>
+            <p>
+                @Html.LabelFor(m => m.CategoryName, "Название категории")
+                <br />
+                @Html.EditorFor(m => m.CategoryName)
+            </p>
+        </fieldset>
+        <input type="submit" value="Изменить" />
+     }*@
+
+
+<h2>Удаление категории</h2>
+<dl>
+    <dt>Родительская категория</dt>
+    <dd>
+        @Html.DisplayFor(m => m.ParentCategory)
+    </dd>
+    <dt>Название категории</dt>
+    <dd>
+        @Html.DisplayFor(m => m.CategoryName)
+    </dd>
+</dl>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+}

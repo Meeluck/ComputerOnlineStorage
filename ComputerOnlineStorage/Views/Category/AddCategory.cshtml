@@ -1,0 +1,38 @@
+﻿@using ComputerOnlineStorage.Models
+@model Category
+    ViewBag.Title = "Добавление категории";
+}
+
+<div>
+    <h3>Добавление нового производителя &nbsp;&nbsp;</h3>
+    @using (Html.BeginForm())
+    {
+
+        <table>
+            <tr>
+                <td>Выберите название родительской категории и введите id</td>
+                @*<td>
+                    <ul>
+                        @foreach (var item in ViewBag.ParentCategory)
+                        {
+                            <li>item</li>
+                        }
+                    </ul>
+                </td>*@
+                <td>
+                    @Html.EditorFor(m => m.ParentCategory)
+                </td>
+            </tr>
+            <tr>
+                <td>Введите название категории</td>
+                <td>
+                    @Html.EditorFor(m => m.CategoryName)
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Добавить" /></td>
+            </tr>
+        </table>
+    }
+
+</div>

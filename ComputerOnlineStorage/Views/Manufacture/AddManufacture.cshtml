@@ -4,13 +4,13 @@
 }
 
 <div>
-    <h3>Форма добавления производителей</h3>
+    <h3>Добавление нового производителя &nbsp;&nbsp;</h3>
     @using (Html.BeginForm("AddManufacture", "Manufacture", FormMethod.Post))
     {
 
         <table>
             <tr>
-                <td>@Html.LabelFor(m => m.ManufactureName, "Введите название проивзодителя")</td>
+                <td>Введите название проивзодителя</td>
                 <td>@Html.TextBoxFor(m => m.ManufactureName)</td>
             </tr>
             <tr>
