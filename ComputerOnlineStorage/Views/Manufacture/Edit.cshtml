@@ -1,0 +1,19 @@
+﻿@model ComputerOnlineStorage.Models.Manufacture
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Изменение названий производителей</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.ManufactureId)
+        <p>
+            @Html.LabelFor(m => m.ManufactureName, "Название производителя")
+            <br />
+            @Html.EditorFor(m => m.ManufactureName)
+        </p>
+    </fieldset>
+    <input type="submit" value="изменить">
+}

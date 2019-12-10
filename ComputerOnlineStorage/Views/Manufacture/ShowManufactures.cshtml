@@ -1,0 +1,34 @@
+﻿@using ComputerOnlineStorage.Models
+@model IEnumerable<Manufacture>
+@{
+    ViewBag.Title = "Производители товаров";
+}
+
+<div>
+    <h3>Список производителей</h3>
+    <table>
+        <tr>
+            <td>Id &nbsp;&nbsp;&nbsp;</td>
+            <td>Производители &nbsp;&nbsp;&nbsp;</td>
+            <td></td>
+        </tr>
+        @foreach (Manufacture b in Model)
+        {
+            <tr>
+                <td><p>@b.ManufactureId</p></td>
+                <td><p>@b.ManufactureName</p></td>
+                <td>
+                    <input type="submit" value="Удалить"
+                           onclick='location.href="Delete/@b.ManufactureId"' />
+                </td>
+                <td>
+                    <input type="submit" value="Изменить"
+                           onclick='location.href="Edit/@b.ManufactureId"' />
+                </td>
+            </tr>
+
+        }
+    </table>
+    <input type="submit" name="AddManufacture" value="Добавить производителя"
+           onclick='location.href="AddManufacture"' />
+</div>

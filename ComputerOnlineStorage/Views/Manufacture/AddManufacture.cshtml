@@ -1,0 +1,22 @@
+﻿@model ComputerOnlineStorage.Models.Manufacture
+@{
+    ViewBag.Title = "Добавление производителя";
+}
+
+<div>
+    <h3>Форма добавления производителей</h3>
+    @using (Html.BeginForm("AddManufacture", "Manufacture", FormMethod.Post))
+    {
+
+        <table>
+            <tr>
+                <td>@Html.LabelFor(m => m.ManufactureName, "Введите название проивзодителя")</td>
+                <td>@Html.TextBoxFor(m => m.ManufactureName)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Добавить" /></td>
+            </tr>
+        </table>
+    }
+
+</div>
