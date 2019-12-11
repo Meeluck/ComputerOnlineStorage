@@ -1,0 +1,25 @@
+﻿
+@model ComputerOnlineStorage.Models.Category
+
+@{
+    ViewBag.Title = "Изменение категории";
+}
+
+<h2>Изменение категории</h2>
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            @Html.HiddenFor(m => m.CategoryId)
+            <p>
+                @Html.LabelFor(m => m.ParentCategory, "Родительская категория")
+                <br />
+                @Html.EditorFor(m => m.ParentCategory)
+            </p>
+            <p>
+                @Html.LabelFor(m => m.CategoryName, "Название категории")
+                <br />
+                @Html.EditorFor(m => m.CategoryName)
+            </p>
+        </fieldset>
+        <input type="submit" value="Изменить" />
+     }
