@@ -6,20 +6,17 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ComputerOnlineStorage.Models
 {
-
-	public class Manufacture
+	public class DeviceCharacteristic
 	{
 		[Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-		public int ManufactureId { get; set; }
+		public int DeviceCharacteristicId { get; set; }
+		
+		public int? DeviceId { get; set; }
+		public Device Device { get; set; }
 
-		[Required, MaxLength(75)]
-		public string ManufactureName { get; set; }
+		public int? CharacteristicId { get; set; }
+		public Characteristics Characteristic { get; set; }
 
-		public List<Device> Devices { get; set; }
-		public Manufacture()
-		{
-			Devices = new List<Device>();
-		}
-
+		public string Value { get; set; }
 	}
 }

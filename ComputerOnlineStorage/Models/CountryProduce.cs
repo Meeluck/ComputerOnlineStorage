@@ -4,22 +4,19 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ComputerOnlineStorage.Models
 {
-
-	public class Manufacture
+	public class CountryProduce
 	{
 		[Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-		public int ManufactureId { get; set; }
-
-		[Required, MaxLength(75)]
-		public string ManufactureName { get; set; }
-
+		public int CountryId { get; set; }
+		public string CountryName { get; set; }
 		public List<Device> Devices { get; set; }
-		public Manufacture()
+
+		public CountryProduce()
 		{
 			Devices = new List<Device>();
 		}
-
 	}
 }
