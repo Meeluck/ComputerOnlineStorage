@@ -16,5 +16,10 @@ namespace ComputerOnlineStorage.Models
 		[Required, MaxLength(75)]
 		public string CategoryName { get; set; }
 
+		public List<Device> Devices { get; set; }
+		public Category()
+		{
+			Devices = new List<Device>();
+		}
 	}
 }
