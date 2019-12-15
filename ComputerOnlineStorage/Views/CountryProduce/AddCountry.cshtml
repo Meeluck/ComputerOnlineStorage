@@ -1,0 +1,22 @@
+﻿@model ComputerOnlineStorage.Models.CountryProduce
+@{
+    ViewBag.Title = "Добавление страны производителя";
+}
+
+<div>
+    <h3>Добавление нового производителя &nbsp;&nbsp;</h3>
+    @using (Html.BeginForm())
+    {
+
+        <table>
+            <tr>
+                <td>Введите название страны проивзодителя</td>
+                <td>@Html.TextBoxFor(m => m.CountryName)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Добавить" /></td>
+            </tr>
+        </table>
+    }
+
+</div>

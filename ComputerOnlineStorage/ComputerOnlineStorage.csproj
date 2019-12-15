@@ -120,6 +120,7 @@
     <Compile Include="Context\OnlineStorageContext.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CharacteristicsController.cs" />
+    <Compile Include="Controllers\CountryProduceController.cs" />
     <Compile Include="Controllers\ManufactureController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,6 +161,10 @@
     <Content Include="Views\Characteristics\AddCharacteristic.cshtml" />
     <Content Include="Views\Characteristics\Delete.cshtml" />
     <Content Include="Views\Characteristics\Edit.cshtml" />
+    <Content Include="Views\CountryProduce\ShowCountries.cshtml" />
+    <Content Include="Views\CountryProduce\AddCountry.cshtml" />
+    <Content Include="Views\CountryProduce\Delete.cshtml" />
+    <Content Include="Views\CountryProduce\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -50,6 +50,14 @@ namespace ComputerOnlineStorage.Context
 			db.Categories.Add(new Category { CategoryId = 4, ParentCategory = 3, CategoryName = "Игровой ноутбук" });
 			db.Categories.Add(new Category { CategoryId = 5, ParentCategory = 3, CategoryName = "Ноутбук для учебы" });
 
+
+			//добавление ин-ии о странах 
+			db.CountryProduces.Add(new CountryProduce { CountryId = 1, CountryName = "USA" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 2, CountryName = "China" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 3, CountryName = "Russia" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 4, CountryName = "Taiwan" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 5, CountryName = "India" });
+
 			//ДОБАВЛЕНИЕ ХАРАКТЕРИСТИК
 				//основные характеристики процесссоров
 			db.Characteristics.Add(new Characteristics

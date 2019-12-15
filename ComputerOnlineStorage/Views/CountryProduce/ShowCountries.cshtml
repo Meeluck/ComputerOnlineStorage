@@ -1,0 +1,36 @@
+﻿@using ComputerOnlineStorage.Models
+@model IEnumerable<CountryProduce>
+
+@{
+    ViewBag.Title = "Производители товаров";
+}
+
+<div>
+    <h3>Список стран производителей</h3>
+    <table>
+        <tr>
+            <td>Id &nbsp;&nbsp;&nbsp;</td>
+            <td>Страна производителя&nbsp;&nbsp;&nbsp;</td>
+            <td></td>
+        </tr>
+        @foreach (CountryProduce cp in Model)
+        {
+            <tr>
+                <td><p>@cp.CountryId</p></td>
+                <td><p>@cp.CountryName</p></td>
+                <td>
+                    <input type="submit" value="Удалить"
+                           onclick='location.href="Delete/@cp.CountryId"' />
+                </td>
+                <td>
+                    <input type="submit" value="Изменить"
+                           onclick='location.href="Edit/@cp.CountryId"' />
+                </td>
+            </tr>
+
+        }
+    </table>
+    <input type="submit"  value="Добавить"
+           onclick='location.href="AddCountry"' />
+</div>
+
