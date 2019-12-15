@@ -19,12 +19,9 @@ namespace ComputerOnlineStorage.Models
 		public DataType DateEndSale { get; set; } //дата окончания продаж
 		public string Coast { get; set; } //цена товара
 
-		public virtual ICollection<Order> Orders { get; set; }
-
-		public Goods()
-		{
-			Orders = new List<Order>();	
-		}
+		public int? OrderId { get; set; }
+		public Order Order { get; set; }
+		
 
 	}
 }

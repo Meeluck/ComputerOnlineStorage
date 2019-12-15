@@ -1,0 +1,23 @@
+﻿@model ComputerOnlineStorage.Models.Characteristics
+@{
+    ViewBag.Title = "Изменение харктеристики";
+}
+
+<h2>Изменение названий производителей</h2>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.CharacteristicId)
+        <p>
+            @Html.LabelFor(m => m.CharacteristicName, "Наизменование харктеристики")
+            <br />
+            @Html.EditorFor(m => m.CharacteristicName)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Measure, "Единица измерения")
+            <br />
+            @Html.EditorFor(m => m.Measure)
+        </p>
+    </fieldset>
+    <input type="submit" value="изменить">
+}

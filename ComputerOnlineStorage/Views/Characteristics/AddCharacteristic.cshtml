@@ -1,0 +1,25 @@
+﻿@model ComputerOnlineStorage.Models.Characteristics
+@{
+    ViewBag.Title = "Добавление характеристик";
+}
+
+<div>
+    <h3>Добавление новой характерисики &nbsp;&nbsp;</h3>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td>Введите название новой характеристики</td>
+                <td>@Html.TextBoxFor(m => m.CharacteristicName)</td>
+            </tr>
+            <tr>
+                <td>Введите единицу измерения(если она есть)</td>
+                <td>@Html.TextBoxFor(m => m.Measure)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Добавить" /></td>
+            </tr>
+        </table>
+    }
+
+</div>

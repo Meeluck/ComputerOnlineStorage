@@ -119,6 +119,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\OnlineStorageContext.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CharacteristicsController.cs" />
     <Compile Include="Controllers\ManufactureController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,6 +156,10 @@
     <Content Include="Views\Category\AddCategory.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Characteristics\ShowCharacteristics.cshtml" />
+    <Content Include="Views\Characteristics\AddCharacteristic.cshtml" />
+    <Content Include="Views\Characteristics\Delete.cshtml" />
+    <Content Include="Views\Characteristics\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -15,11 +15,7 @@ namespace ComputerOnlineStorage.Models
 		public int BuyerId { get; set; }
 		public Buyer Buyer { get; set; }
 
-		//public virtual ICollection<Device> Devices { get; set; }
-		//public int DeviceId { get; set; }
-		//public Device Device { get; set; }
-
-		public virtual ICollection<Goods> Goods { get; set; }
+		public List<Goods> Goods{ get; set; }
 
 		public decimal Coast { get; set; }
 		public string Comment { get; set; }

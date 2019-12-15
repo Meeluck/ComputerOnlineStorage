@@ -24,7 +24,6 @@ namespace ComputerOnlineStorage.Models
 		public string DeviceSeries { get; set; }
 		public string DeviceModel { get; set; }
 		
-
 		public List<Goods> Goods { get; set; }
 		public int? CountryId { get; set; }
 		public CountryProduce Country { get; set; }

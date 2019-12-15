@@ -1,0 +1,36 @@
+﻿@using ComputerOnlineStorage.Models
+@model IEnumerable<Characteristics>
+@{
+    ViewBag.Title = "Справочник характеристик";
+}
+
+<div>
+    <h3>Справочник характеристик</h3>
+    <table>
+        <tr>
+            <td>Id &nbsp;&nbsp;&nbsp;</td>
+            <td>Наименование характеристики &nbsp;&nbsp;&nbsp;</td>
+            <td>Единица измерения &nbsp;&nbsp;&nbsp;</td>
+        </tr>
+        @foreach (Characteristics ch in Model)
+        {
+            <tr>
+                <td><p>@ch.CharacteristicId</p></td>
+                <td><p>@ch.CharacteristicName</p></td>
+                <td><p>@ch.Measure</p></td>
+                <td>
+                    <input type="submit" value="Удалить"
+                           onclick='location.href="Delete/@ch.CharacteristicId"' />
+                </td>
+                <td>
+                    <input type="submit" value="Изменить"
+                           onclick='location.href="Edit/@ch.CharacteristicId"' />
+                </td>
+            </tr>
+
+        }
+    </table>
+    <input type="submit" value="Добавить характеристку"
+           onclick='location.href="AddCharacteristic"' />
+</div>
+
