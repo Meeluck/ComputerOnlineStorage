@@ -27,7 +27,7 @@ namespace ComputerOnlineStorage.Context
 		public DbSet<Goods> Goods { get; set; }
 	}
 	public class DbInitializer :
-			DropCreateDatabaseIfModelChanges<OnlineStorageContext>
+			DropCreateDatabaseAlways<OnlineStorageContext>
 	{
 
 		protected override void Seed(OnlineStorageContext db)
@@ -52,11 +52,11 @@ namespace ComputerOnlineStorage.Context
 
 
 			//добавление ин-ии о странах 
-			db.CountryProduces.Add(new CountryProduce { CountryId = 1, CountryName = "USA" });
-			db.CountryProduces.Add(new CountryProduce { CountryId = 2, CountryName = "China" });
-			db.CountryProduces.Add(new CountryProduce { CountryId = 3, CountryName = "Russia" });
-			db.CountryProduces.Add(new CountryProduce { CountryId = 4, CountryName = "Taiwan" });
-			db.CountryProduces.Add(new CountryProduce { CountryId = 5, CountryName = "India" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 1, CountryName = "США" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 2, CountryName = "Китай" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 3, CountryName = "Россия" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 4, CountryName = "Тайвань" });
+			db.CountryProduces.Add(new CountryProduce { CountryId = 5, CountryName = "Индия" });
 
 			//ДОБАВЛЕНИЕ ХАРАКТЕРИСТИК
 				//основные характеристики процесссоров
@@ -153,8 +153,170 @@ namespace ComputerOnlineStorage.Context
 				CharacteristicId = 16,
 				CharacteristicName = "Операционная система"
 			});
+			db.Characteristics.Add(new Characteristics
+			{
+				CharacteristicId = 17,
+				CharacteristicName = "Название процессора"
+			});
+			//Описание характеристик
+			DeviceCharacteristic dc1 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 1,
+				CharacteristicId = 1, 
+				Value = "6"
+			};
+			DeviceCharacteristic dc2 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 2,
+				CharacteristicId = 2,
+				Value = "2.2-4.1"
+			};
+			DeviceCharacteristic dc3 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 3,
+				CharacteristicId = 3,
+				Value = "8"
+			};
+			DeviceCharacteristic dc4 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 4,
+				CharacteristicId = 4,
+				Value = "1920x1080"
+			};
+			DeviceCharacteristic dc5 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 5,
+				CharacteristicId = 5,
+				Value = "15,6"
+			};
+			DeviceCharacteristic dc6 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 6,
+				CharacteristicId = 6,
+				Value = "IPS"
+			};
+			DeviceCharacteristic dc7 = new DeviceCharacteristic
+			{
+				CharacteristicId = 7,
+				Value = "60"
+			};
+			DeviceCharacteristic dc8 = new DeviceCharacteristic
+			{
+				CharacteristicId = 8,
+				Value = "8"
+			};
+			DeviceCharacteristic dc9 = new DeviceCharacteristic
+			{
+				CharacteristicId = 9,
+				Value = "2333"
+			};
+			DeviceCharacteristic dc10 = new DeviceCharacteristic
+			{
+				CharacteristicId = 10,
+				Value = "ddr4"
+			};
+			DeviceCharacteristic dc11 = new DeviceCharacteristic
+			{
+				CharacteristicId = 11,
+				Value = "HDD"
+			};
+			DeviceCharacteristic dc12 = new DeviceCharacteristic
+			{
+				CharacteristicId = 11,
+				Value = "SSD"
+			};
+			DeviceCharacteristic dc13 = new DeviceCharacteristic
+			{
+				CharacteristicId = 12,
+				Value = "1000"
+			};
+			DeviceCharacteristic dc14 = new DeviceCharacteristic
+			{
+				CharacteristicId = 12,
+				Value = "128"
+			};
+			DeviceCharacteristic dc15 = new DeviceCharacteristic
+			{
+				CharacteristicId = 13,
+				Value = "5400"
+			};
+			DeviceCharacteristic dc16 = new DeviceCharacteristic
+			{
+				CharacteristicId = 14,
+				Value = "4"
+			};
+			DeviceCharacteristic dc17 = new DeviceCharacteristic
+			{
+				CharacteristicId = 15,
+				Value = "Дискретная"
+			};
+			DeviceCharacteristic dc18 = new DeviceCharacteristic
+			{
+				CharacteristicId = 16,
+				Value = "Linux"
+			};
+			DeviceCharacteristic dc19 = new DeviceCharacteristic
+			{
+				CharacteristicId = 17,
+				Value = "Intel Core i7 8750H"
+			};
+			DeviceCharacteristic dc20 = new DeviceCharacteristic
+			{
+				CharacteristicId = 8,
+				Value = "12"
+			};
+			DeviceCharacteristic dc21 = new DeviceCharacteristic
+			{
+				CharacteristicId = 9,
+				Value = "2666"
+			};
+			DeviceCharacteristic dc22 = new DeviceCharacteristic
+			{
+				CharacteristicId = 13,
+				Value = "7200"
+			};
+			DeviceCharacteristic dc23 = new DeviceCharacteristic
+			{
+				CharacteristicId = 14,
+				Value ="6"
+			};
+			
+			List<DeviceCharacteristic> deviceCharacteristicsList1 = new List<DeviceCharacteristic>
+			{
+				dc17, dc1, dc2, dc3, dc4, dc5, dc6, dc7, dc8, dc9,
+				dc10, dc11, dc13,dc15,dc12,dc14, dc17, dc16,
+				dc18
+			};
 
+			List<DeviceCharacteristic> deviceCharacteristicsList2= new List<DeviceCharacteristic>
+			{
+				dc17, dc1, dc2, dc3, dc4, dc5, dc6, dc7, dc20,dc21,dc10,dc11,
+				dc13,dc22,dc12,dc14,dc17,dc23,dc18
+			};
 
+			db.DeviceCharacteristics.AddRange(deviceCharacteristicsList1);
+			db.DeviceCharacteristics.AddRange(deviceCharacteristicsList2);
+			//Добавление продуктов
+			Device dv1 = new Device
+			{
+				ManufactureId = 8,
+				CategoryId = 4,
+				DeviceSeries = "G3",
+				DeviceModel = "3579",
+				CountryId = 2,
+				DeviceCharacteristics = deviceCharacteristicsList1
+			};
+			Device dv2 = new Device
+			{
+				ManufactureId = 9,
+				CategoryId = 3,
+				DeviceSeries = "Omen",
+				DeviceModel = "15-dc0017ur",
+				CountryId = 2,
+				DeviceCharacteristics = deviceCharacteristicsList2
+			};
+
+			db.Devices.AddRange(new List<Device> { dv1, dv2 });
 			base.Seed(db);
 		}
 	}
