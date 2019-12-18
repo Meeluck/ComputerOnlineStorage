@@ -1,0 +1,53 @@
+﻿@using ComputerOnlineStorage.Controllers
+@model IEnumerable<ShowDevice>
+
+@{
+    ViewBag.Title = "ShowDevices";
+}
+
+<div>
+    <h3>Категории товаров</h3>
+    <table>
+        <tr>
+            <td>Id &nbsp;&nbsp;&nbsp;</td>
+            <td>Категория &nbsp;&nbsp;&nbsp;</td>
+            <td>Прозиводитель &nbsp;&nbsp;&nbsp;</td>
+            <td>Серия &nbsp;&nbsp;&nbsp;</td>
+            <td>Модель &nbsp;&nbsp;&nbsp;</td>
+            <td></td>
+        </tr>
+        @foreach (ShowDevice c in Model)
+        {
+            <tr>
+                <td><p>@c.DeviceId &nbsp;&nbsp;&nbsp;</p></td>
+
+                <td>
+                    <p>
+                        @c.Category &nbsp;&nbsp;&nbsp;
+                    </p>
+                </td>
+
+                <td>
+                    <p>
+                        @c.Manufacture &nbsp;&nbsp;&nbsp;
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        @c.DeviceSeries &nbsp;&nbsp;&nbsp;
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        @c.DeviceModel &nbsp;&nbsp;&nbsp;
+                    </p>
+                </td>
+                <td>
+                    <input type="submit" value="Подробная информация" onclick='location.href="MoreInfo"' />
+                </td>
+            </tr>
+            
+        }
+    </table>
+</div>
+

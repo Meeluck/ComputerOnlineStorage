@@ -121,6 +121,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CharacteristicsController.cs" />
     <Compile Include="Controllers\CountryProduceController.cs" />
+    <Compile Include="Controllers\DeviceController.cs" />
     <Compile Include="Controllers\ManufactureController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +167,7 @@
     <Content Include="Views\CountryProduce\Delete.cshtml" />
     <Content Include="Views\CountryProduce\Edit.cshtml" />
     <Content Include="Views\Category\TestShow.cshtml" />
+    <Content Include="Views\Device\ShowDevices.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
