@@ -10,18 +10,8 @@
 
         <table>
             <tr>
-                <td>Выберите название родительской категории и введите id</td>
-                @*<td>
-                    <ul>
-                        @foreach (var item in ViewBag.ParentCategory)
-                        {
-                            <li>item</li>
-                        }
-                    </ul>
-                </td>*@
-                <td>
-                    @Html.EditorFor(m => m.ParentCategory)
-                </td>
+                <td>Выберите название родительской категории </td>
+                <td>@Html.DropDownListFor(m=>m.ParentCategory, ViewBag.ParentCategory as SelectList)</td>
             </tr>
             <tr>
                 <td>Введите название категории</td>
