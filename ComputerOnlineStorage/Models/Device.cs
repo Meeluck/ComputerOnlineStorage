@@ -19,7 +19,8 @@ namespace ComputerOnlineStorage.Models
 		public int? CategoryId { get; set; }
 		public Category Category { get; set; }
 
-		public virtual ICollection<DeviceCharacteristic> DeviceCharacteristics { get; set; }
+		public List<DeviceCharacteristic> DeviceCharacteristics { get; set; }
+
 		public string DeviceSeries { get; set; }
 		public string DeviceModel { get; set; }
 		

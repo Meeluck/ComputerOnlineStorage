@@ -167,163 +167,264 @@ namespace ComputerOnlineStorage.Context
 				CharacteristicName = "Название процессора"
 			});
 			//Описание характеристик
-			DeviceCharacteristic dc1 = new DeviceCharacteristic
+			//DELL G3 15 3579
+			//процессор
+			DeviceCharacteristic laptop1DC1 = new DeviceCharacteristic
+			{
+				CharacteristicId = 17,
+				Value = "Intel Core i7 8750H"
+			};
+			 
+			DeviceCharacteristic laptop1DC2 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 1,
 				CharacteristicId = 1,
 				Value = "6"
 			};
-			DeviceCharacteristic dc2 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC3 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 2,
 				CharacteristicId = 2,
 				Value = "2.2-4.1"
 			};
-			DeviceCharacteristic dc3 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC4 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 3,
 				CharacteristicId = 3,
 				Value = "8"
 			};
-			DeviceCharacteristic dc4 = new DeviceCharacteristic
+			//монитор
+			DeviceCharacteristic laptop1DC5 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 4,
 				CharacteristicId = 4,
 				Value = "1920x1080"
 			};
-			DeviceCharacteristic dc5 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC6 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 5,
 				CharacteristicId = 5,
 				Value = "15,6"
 			};
-			DeviceCharacteristic dc6 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC7 = new DeviceCharacteristic
 			{
 				DeviceCharacteristicId = 6,
 				CharacteristicId = 6,
 				Value = "IPS"
 			};
-			DeviceCharacteristic dc7 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC8 = new DeviceCharacteristic
 			{
 				CharacteristicId = 7,
 				Value = "60"
 			};
-			DeviceCharacteristic dc8 = new DeviceCharacteristic
+			//оперативная память
+			DeviceCharacteristic laptop1DC9 = new DeviceCharacteristic
 			{
 				CharacteristicId = 8,
 				Value = "8"
 			};
-			DeviceCharacteristic dc9 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC10 = new DeviceCharacteristic
 			{
 				CharacteristicId = 9,
 				Value = "2333"
 			};
-			DeviceCharacteristic dc10 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC11 = new DeviceCharacteristic
 			{
 				CharacteristicId = 10,
 				Value = "ddr4"
 			};
-			DeviceCharacteristic dc11 = new DeviceCharacteristic
+			//hdd
+			DeviceCharacteristic laptop1DC12 = new DeviceCharacteristic
 			{
 				CharacteristicId = 11,
 				Value = "HDD"
 			};
-			DeviceCharacteristic dc12 = new DeviceCharacteristic
-			{
-				CharacteristicId = 11,
-				Value = "SSD"
-			};
-			DeviceCharacteristic dc13 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC13 = new DeviceCharacteristic
 			{
 				CharacteristicId = 12,
 				Value = "1000"
 			};
-			DeviceCharacteristic dc14 = new DeviceCharacteristic
-			{
-				CharacteristicId = 12,
-				Value = "128"
-			};
-			DeviceCharacteristic dc15 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC14 = new DeviceCharacteristic
 			{
 				CharacteristicId = 13,
 				Value = "5400"
 			};
-			DeviceCharacteristic dc16 = new DeviceCharacteristic
+			//ssd
+			DeviceCharacteristic laptop1DC15 = new DeviceCharacteristic
+			{
+				CharacteristicId = 11,
+				Value = "SSD"
+			};
+			DeviceCharacteristic laptop1DC16 = new DeviceCharacteristic
+			{
+				CharacteristicId = 12,
+				Value = "128"
+			};
+			//видеокарта
+			DeviceCharacteristic laptop1DC17 = new DeviceCharacteristic
 			{
 				CharacteristicId = 14,
 				Value = "4"
 			};
-			DeviceCharacteristic dc17 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC18 = new DeviceCharacteristic
 			{
 				CharacteristicId = 15,
 				Value = "Дискретная"
 			};
-			DeviceCharacteristic dc18 = new DeviceCharacteristic
+			DeviceCharacteristic laptop1DC19 = new DeviceCharacteristic
 			{
 				CharacteristicId = 16,
 				Value = "Linux"
 			};
-			DeviceCharacteristic dc19 = new DeviceCharacteristic
-			{
-				CharacteristicId = 17,
-				Value = "Intel Core i7 8750H"
-			};
-			DeviceCharacteristic dc20 = new DeviceCharacteristic
-			{
-				CharacteristicId = 8,
-				Value = "12"
-			};
-			DeviceCharacteristic dc21 = new DeviceCharacteristic
-			{
-				CharacteristicId = 9,
-				Value = "2666"
-			};
-			DeviceCharacteristic dc22 = new DeviceCharacteristic
-			{
-				CharacteristicId = 13,
-				Value = "7200"
-			};
-			DeviceCharacteristic dc23 = new DeviceCharacteristic
-			{
-				CharacteristicId = 14,
-				Value = "6"
-			};
 
-			List<DeviceCharacteristic> deviceCharacteristicsList1 = new List<DeviceCharacteristic>
+			List<DeviceCharacteristic> deviceCharacteristicsLaptop1 = new List<DeviceCharacteristic>
 			{
-				dc17, dc1, dc2, dc3, dc4, dc5, dc6, dc7, dc8, dc9,
-				dc10, dc11, dc13,dc15,dc12,dc14, dc17, dc16,
-				dc18
+				laptop1DC1, laptop1DC2, laptop1DC3, laptop1DC4, laptop1DC5, laptop1DC6, laptop1DC7, laptop1DC8, laptop1DC9,
+				laptop1DC10, laptop1DC11, laptop1DC12, laptop1DC13, laptop1DC14, laptop1DC15, laptop1DC16, laptop1DC17,
+				laptop1DC18, laptop1DC19
 			};
-
-			List<DeviceCharacteristic> deviceCharacteristicsList2 = new List<DeviceCharacteristic>
-			{
-				dc17, dc1, dc2, dc3, dc4, dc5, dc6, dc7, dc20,dc21,dc10,dc11,
-				dc13,dc22,dc12,dc14,dc17,dc23,dc18
-			};
-
-			db.DeviceCharacteristics.AddRange(deviceCharacteristicsList1);
-			db.DeviceCharacteristics.AddRange(deviceCharacteristicsList2);
-			//Добавление продуктов
-			Device dv1 = new Device
+			db.DeviceCharacteristics.AddRange(deviceCharacteristicsLaptop1);
+			Device laptop1 = new Device
 			{
 				ManufactureId = 8,
 				CategoryId = 4,
 				DeviceSeries = "G3",
 				DeviceModel = "3579",
 				CountryId = 2,
-				DeviceCharacteristics = deviceCharacteristicsList1
+				DeviceCharacteristics = deviceCharacteristicsLaptop1
 			};
-			Device dv2 = new Device
+			db.Devices.Add(laptop1);
+
+			//HP Omen 15-dc0017ur
+			//процессор
+			DeviceCharacteristic laptop2DC1 = new DeviceCharacteristic
+			{
+				CharacteristicId = 17,
+				Value = "Intel Core i7 8750H"
+			};
+
+			DeviceCharacteristic laptop2DC2 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 1,
+				CharacteristicId = 1,
+				Value = "6"
+			};
+			DeviceCharacteristic laptop2DC3 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 2,
+				CharacteristicId = 2,
+				Value = "2.2-4.1"
+			};
+			DeviceCharacteristic laptop2DC4 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 3,
+				CharacteristicId = 3,
+				Value = "8"
+			};
+			//монитор
+			DeviceCharacteristic laptop2DC5 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 4,
+				CharacteristicId = 4,
+				Value = "1920x1080"
+			};
+			DeviceCharacteristic laptop2DC6 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 5,
+				CharacteristicId = 5,
+				Value = "15,6"
+			};
+			DeviceCharacteristic laptop2DC7 = new DeviceCharacteristic
+			{
+				DeviceCharacteristicId = 6,
+				CharacteristicId = 6,
+				Value = "IPS"
+			};
+			DeviceCharacteristic laptop2DC8 = new DeviceCharacteristic
+			{
+				CharacteristicId = 7,
+				Value = "60"
+			};
+			//оперативная память
+			DeviceCharacteristic laptop2DC9 = new DeviceCharacteristic
+			{
+				CharacteristicId = 8,
+				Value = "12"
+			};
+			DeviceCharacteristic laptop2DC10 = new DeviceCharacteristic
+			{
+				CharacteristicId = 9,
+				Value = "2666"
+			};
+
+			DeviceCharacteristic laptop2DC11 = new DeviceCharacteristic
+			{
+				CharacteristicId = 10,
+				Value = "ddr4"
+			};
+			//hdd
+			DeviceCharacteristic laptop2DC12 = new DeviceCharacteristic
+			{
+				CharacteristicId = 11,
+				Value = "HDD"
+			};
+			DeviceCharacteristic laptop2DC13 = new DeviceCharacteristic
+			{
+				CharacteristicId = 12,
+				Value = "1000"
+			};
+			DeviceCharacteristic laptop2DC14 = new DeviceCharacteristic
+			{
+				CharacteristicId = 13,
+				Value = "7200"
+			};
+			//ssd
+			DeviceCharacteristic laptop2DC15 = new DeviceCharacteristic
+			{
+				CharacteristicId = 11,
+				Value = "SSD"
+			};
+			DeviceCharacteristic laptop2DC16 = new DeviceCharacteristic
+			{
+				CharacteristicId = 12,
+				Value = "128"
+			};
+			//видеокарта
+			DeviceCharacteristic laptop2DC17 = new DeviceCharacteristic
+			{
+				CharacteristicId = 14,
+				Value = "6"
+			};
+			DeviceCharacteristic laptop2DC18 = new DeviceCharacteristic
+			{
+				CharacteristicId = 15,
+				Value = "Дискретная"
+			};
+			DeviceCharacteristic laptop2DC19 = new DeviceCharacteristic
+			{
+				CharacteristicId = 16,
+				Value = "Linux"
+			};
+
+			List<DeviceCharacteristic> deviceCharacteristicsLaptop2 = new List<DeviceCharacteristic>
+			{
+				laptop2DC1,laptop2DC2,laptop2DC3,laptop2DC4,laptop2DC5,
+				laptop2DC6,laptop2DC7,laptop2DC8,laptop2DC9,laptop2DC10,
+				laptop2DC11,laptop2DC12,laptop2DC13,laptop2DC14,laptop2DC15,
+				laptop2DC16,laptop2DC17,laptop2DC18,laptop2DC19
+			};
+
+			db.DeviceCharacteristics.AddRange(deviceCharacteristicsLaptop2);
+			Device laptop2= new Device
 			{
 				ManufactureId = 9,
 				CategoryId = 3,
 				DeviceSeries = "Omen",
 				DeviceModel = "15-dc0017ur",
 				CountryId = 2,
-				DeviceCharacteristics = deviceCharacteristicsList2
+				DeviceCharacteristics = deviceCharacteristicsLaptop2
 			};
-			db.Devices.AddRange(new List<Device> { dv1, dv2 });
+			db.Devices.Add(laptop2);
 
 			// INTEL Core I9-9900
 			DeviceCharacteristic dcForProc1 = new DeviceCharacteristic
@@ -446,7 +547,7 @@ namespace ComputerOnlineStorage.Context
 			{
 				ManufactureId = 10,
 				CategoryId = 7,
-				DeviceCharacteristics = listDeviceCharacteristicsForProc3,
+				DeviceCharacteristics = listDeviceCharacteristicsForProc4,
 				DeviceSeries = "Ryzen 5",
 				DeviceModel = "2600X",
 				CountryId = 2

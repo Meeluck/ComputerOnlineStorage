@@ -1,11 +1,14 @@
 ﻿@using ComputerOnlineStorage.Controllers
 @model IEnumerable<ShowDevice>
-
 @{
     ViewBag.Title = "ShowDevices";
 }
 
 <div>
+    @*<table>*@
+        @*<tr>Выбрать производителя &nbsp;&nbsp;&nbsp;</tr>*@
+        <input type="submit" value="Выбрать производителя" onclick='location.href="ShowByManufactures"'/> 
+    @*</table>*@
     <h3>Категории товаров</h3>
     <table>
         <tr>
@@ -43,7 +46,8 @@
                     </p>
                 </td>
                 <td>
-                    <input type="submit" value="Подробная информация" onclick='location.href="MoreInfo"' />
+                    <input type="submit" value="Подробная информация" 
+                           onclick='location.href="MoreInfo/@c.DeviceId"' />
                 </td>
             </tr>
             

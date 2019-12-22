@@ -168,6 +168,8 @@
     <Content Include="Views\CountryProduce\Edit.cshtml" />
     <Content Include="Views\Category\TestShow.cshtml" />
     <Content Include="Views\Device\ShowDevices.cshtml" />
+    <Content Include="Views\Device\MoreInfo.cshtml" />
+    <Content Include="Views\Device\ShowByManufactures.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

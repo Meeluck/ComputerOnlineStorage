@@ -10,19 +10,19 @@ namespace ComputerOnlineStorage.Models
 	{
 		[Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int DeviceCharacteristicId { get; set; }
-		
-		//public int? DeviceId { get; set; }
-		//public Device Device { get; set; }
-		public virtual ICollection<Device> Devices { get; set; }
+
+		public int? DeviceId { get; set; }
+		public Device Device { get; set; }
+		//public virtual ICollection<Device> Devices { get; set; }
 
 		public int? CharacteristicId { get; set; }
 		public Characteristics Characteristic { get; set; }
 
 		public string Value { get; set; }
 
-		public DeviceCharacteristic()
-		{
-			Devices = new List<Device>();
-		}
+		//public DeviceCharacteristic()
+		//{
+		//	Devices = new List<Device>();
+		//}
 	}
 }
