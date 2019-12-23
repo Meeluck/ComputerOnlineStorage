@@ -1,15 +1,18 @@
-﻿@using ComputerOnlineStorage.Controllers
+﻿
+@*@{
+    ViewBag.Title = "ShowByManufacture";
+}
+<h1>Может заработает</h1>
+<input type="text" value="@ViewBag.manufactures"/>*@
+
+@using ComputerOnlineStorage.Controllers
 @model IEnumerable<ShowDevice>
 @{
     ViewBag.Title = "ShowDevices";
 }
 
     <div>
-        @using (Html.BeginForm("ShowByManufacture", "Device", FormMethod.Post))
-        {
-            @Html.DropDownList("ManufactureName", ViewBag.manufactures as SelectList)
-            <input type="submit" value="ок" />
-        }
+       
         <h3>Категории товаров</h3>
         <table>
             <tr>
@@ -55,4 +58,3 @@
             }
         </table>
     </div>
-

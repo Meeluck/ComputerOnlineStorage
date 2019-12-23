@@ -46,48 +46,32 @@ namespace ComputerOnlineStorage.Controllers
 							  DeviceSeries = dev.DeviceSeries
 						  };
 
-			//var manufacture = (from dev in db.Devices
-			//				  join man in db.Manufactures on dev.ManufactureId equals man.ManufactureId into temp 
-			//				  from t in temp
-			//				  select new 
-			//				  {
-			//					  ManufactureId = t.ManufactureId,
-			//					  ManufactureName = t.ManufactureName
-			//				  }).Distinct();
-			
-
-			//SelectList manufactures = new SelectList(manufacture, "ManufactureId", "ManufactureName");
-			//ViewBag.manufactures = manufactures;
-
-			
-			return View(devices.ToList());
-        }
-
-		
-		public ActionResult ShowByManufactures()
-		{
 			var manufacture = (from dev in db.Devices
 							   join man in db.Manufactures on dev.ManufactureId equals man.ManufactureId into temp
 							   from t in temp
-							   select new Manufacture
+							   select new
 							   {
 								   ManufactureId = t.ManufactureId,
 								   ManufactureName = t.ManufactureName
 							   }).Distinct();
 
+
 			SelectList manufactures = new SelectList(manufacture, "ManufactureId", "ManufactureName");
 			ViewBag.manufactures = manufactures;
 
 
-			return View();
-		}
+			return View(devices.ToList());
+        }
+
 		[HttpPost]
-		public ActionResult ShowDevices(int id)
+		public ActionResult ShowByManufacture(string ManufactureName)
 		{
+			int manufactureId = Convert.ToInt32(ManufactureName);
+
 			var devices = from dev in db.Devices
 						  join man in db.Manufactures on dev.ManufactureId equals man.ManufactureId
 						  join cat in db.Categories on dev.CategoryId equals cat.CategoryId
-						  where dev.ManufactureId == id
+						  where dev.ManufactureId == manufactureId
 						  select new ShowDevice
 						  {
 							  DeviceId = dev.DeviceId,
@@ -97,9 +81,9 @@ namespace ComputerOnlineStorage.Controllers
 							  DeviceSeries = dev.DeviceSeries
 						  };
 
-			return View(id);
+			return View(devices.ToList());
 		}
-		[HttpPost]
+		
 		public ActionResult MoreInfo(int id)
 		{
 
