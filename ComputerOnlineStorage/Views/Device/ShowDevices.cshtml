@@ -7,10 +7,11 @@
     <div>
         @using (Html.BeginForm("ShowByManufacture", "Device", FormMethod.Post))
         {
+            <label for="Name">Производители &nbsp;&nbsp; </label>
             @Html.DropDownList("ManufactureName", ViewBag.manufactures as SelectList)
             <input type="submit" value="ок" />
         }
-        <h3>Категории товаров</h3>
+        <h3>Список товаров</h3>
         <table>
             <tr>
                 <td>Id &nbsp;&nbsp;&nbsp;</td>
@@ -48,7 +49,7 @@
                     </td>
                     <td>
                         <input type="submit" value="Подробная информация"
-                               onclick='location.href="MoreInfo/@c.DeviceId"' />
+                               onclick='location.href="Device/MoreInfo/@c.DeviceId"' />
                     </td>
                 </tr>
 
