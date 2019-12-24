@@ -1,0 +1,59 @@
+﻿@using ComputerOnlineStorage.Controllers
+@model IEnumerable<ShowDevice>
+@{
+    ViewBag.Title = "ShowDevices";
+}
+
+    <div>
+        @using (Html.BeginForm("ShowByManufacture", "Device", FormMethod.Post))
+        {
+            <label for="Name">Производители &nbsp;&nbsp; </label>
+            @Html.DropDownList("ManufactureName", ViewBag.manufactures as SelectList)
+            <input type="submit" value="ок" />
+        }
+        <h3>Список товаров</h3>
+        <table>
+            <tr>
+                <td>Id &nbsp;&nbsp;&nbsp;</td>
+                <td>Категория &nbsp;&nbsp;&nbsp;</td>
+                <td>Прозиводитель &nbsp;&nbsp;&nbsp;</td>
+                <td>Серия &nbsp;&nbsp;&nbsp;</td>
+                <td>Модель &nbsp;&nbsp;&nbsp;</td>
+                <td></td>
+            </tr>
+            @foreach (ShowDevice c in Model)
+            {
+                <tr>
+                    <td><p>@c.DeviceId &nbsp;&nbsp;&nbsp;</p></td>
+
+                    <td>
+                        <p>
+                            @c.Category &nbsp;&nbsp;&nbsp;
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>
+                            @c.Manufacture &nbsp;&nbsp;&nbsp;
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            @c.DeviceSeries &nbsp;&nbsp;&nbsp;
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            @c.DeviceModel &nbsp;&nbsp;&nbsp;
+                        </p>
+                    </td>
+                    <td>
+                        <input type="submit" value="Подробная информация"
+                               onclick='location.href="Device/MoreInfo/@c.DeviceId"' />
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </div>
+

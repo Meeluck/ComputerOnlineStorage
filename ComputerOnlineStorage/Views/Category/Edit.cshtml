@@ -10,10 +10,15 @@
     {
         <fieldset>
             @Html.HiddenFor(m => m.CategoryId)
-            <p>
+            @*<p>
                 @Html.LabelFor(m => m.ParentCategory, "Родительская категория")
                 <br />
                 @Html.EditorFor(m => m.ParentCategory)
+            </p>*@
+            <p>
+                <p>Родительская категория</p>
+                <br />
+                @Html.DropDownListFor(m=>m.ParentCategory, ViewBag.ParentCategory as SelectList)
             </p>
             <p>
                 @Html.LabelFor(m => m.CategoryName, "Название категории")

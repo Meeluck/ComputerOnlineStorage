@@ -1,0 +1,28 @@
+﻿@model ComputerOnlineStorage.Controllers.DeviceMoreInfo
+@{
+    ViewBag.Title = "Подробная информация";
+}
+
+<h2>Подробная информация</h2>
+<dl>
+    <dt>Категория</dt>
+    <dd>
+        @Html.DisplayFor(m => m.Category)
+    </dd>
+    <dt>Наименование устройства</dt>
+    <dd>
+        @Html.DisplayFor(m => m.Manufacture)&nbsp; @Html.DisplayFor(m => m.DeviceSeries)&nbsp;
+        @Html.DisplayFor(m => m.DeviceModel)&nbsp;
+    </dd>
+    <dt>Страна производитель</dt>
+    <dd>
+        @Html.DisplayFor(m => m.Country)
+    </dd>
+    <dt>Характеристики</dt>
+    
+    @foreach(string s in Model.Characteristics)
+    {
+        <dd>--@s</dd>
+    }
+</dl>
+

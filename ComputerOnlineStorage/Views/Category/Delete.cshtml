@@ -1,41 +1,39 @@
-﻿@model ComputerOnlineStorage.Models.Category
+﻿@*@model ComputerOnlineStorage.Controllers.ShowCategories*@
 
+@model ComputerOnlineStorage.Models.Category
 @{
     ViewBag.Title = "Удаление категорий";
 }
 
-@*<h2>Изменение категории</h2>
+<h2>Удаление категории</h2>
+    <dl>
+        <dt>Родительская категория</dt>
+        <dd>
+            @ViewData["ParentCategory"]
+        </dd>
+        @Html.HiddenFor(m =>m.ParentCategory)
+        <dt>Название категории</dt>
+        <dd>
+            @Html.DisplayFor(m => m.CategoryName)
+        </dd>
+    </dl>
     @using (Html.BeginForm())
     {
-        <fieldset>
-            @Html.HiddenFor(m => m.CategoryId)
-            <p>
-                @Html.LabelFor(m => m.ParentCategory, "Родительская категория")
-                <br />
-                @Html.EditorFor(m => m.ParentCategory)
-            </p>
-            <p>
-                @Html.LabelFor(m => m.CategoryName, "Название категории")
-                <br />
-                @Html.EditorFor(m => m.CategoryName)
-            </p>
-        </fieldset>
-        <input type="submit" value="Изменить" />
-     }*@
+        <input type="submit" value="Удалить" />
+    }
 
-
-<h2>Удаление категории</h2>
-<dl>
-    <dt>Родительская категория</dt>
-    <dd>
-        @Html.DisplayFor(m => m.ParentCategory)
-    </dd>
-    <dt>Название категории</dt>
-    <dd>
-        @Html.DisplayFor(m => m.CategoryName)
-    </dd>
-</dl>
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Удалить" />
-}
+@*<h2>Удаление категории</h2>
+    <dl>
+        <dt>Родительская категория</dt>
+        <dd>
+            @Html.DisplayFor(m => m.ParentCategory)
+        </dd>
+        <dt>Название категории</dt>
+        <dd>
+            @Html.DisplayFor(m => m.CategoryName)
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Удалить" />
+    }*@
