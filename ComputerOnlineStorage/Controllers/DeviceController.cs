@@ -64,9 +64,9 @@ namespace ComputerOnlineStorage.Controllers
         }
 
 		[HttpPost]
-		public ActionResult ShowByManufacture(string ManufactureName)
+		public ActionResult ShowByManufacture(string ManufactureId)
 		{
-			int manufactureId = Convert.ToInt32(ManufactureName);
+			int manufactureId = Convert.ToInt32(ManufactureId);
 
 			var devices = from dev in db.Devices
 						  join man in db.Manufactures on dev.ManufactureId equals man.ManufactureId

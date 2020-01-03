@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ComputerOnlineStorage.RouteConfig">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.MvcApplication">
+    <Position X="2.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Context.OnlineStorageContext">
+    <Position X="2.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAkAAAABAAAAAAAACAEQAAAAQAAAEAAAAAIAAAAAACA=</HashCode>
+      <FileName>Context\OnlineStorageContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Context.DbInitializer">
+    <Position X="2.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Context\OnlineStorageContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.ShowCategories">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Controllers\CategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.CategoryController">
+    <Position X="12.25" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQQgACAAAAAAAAAAAEAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\CategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.CharacteristicsController">
+    <Position X="4.75" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAACAAAAEAAAAAAEAAAACAAAAAAQAAAA=</HashCode>
+      <FileName>Controllers\CharacteristicsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.CountryProduceController">
+    <Position X="14.75" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAUAACAAAAAAAAAAAEAAAACAAAEAAAAAAA=</HashCode>
+      <FileName>Controllers\CountryProduceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.ShowDevice">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAEACAA=</HashCode>
+      <FileName>Controllers\DeviceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.DeviceMoreInfo">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\DeviceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.DeviceController">
+    <Position X="10.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAgQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\DeviceController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Controllers.ManufactureController">
+    <Position X="7.5" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAACAEAAAAAAAAAEAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ManufactureController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Category">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAQCAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Characteristics">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ggAAAAABAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Models\Characteristics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.CountryProduce">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CountryProduce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Device">
+    <Position X="9.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAABAAAAAgAAAgAAAAAAAAIQAAAAEAAAAgEACCA=</HashCode>
+      <FileName>Models\Device.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.DeviceCharacteristic">
+    <Position X="7" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAACAAAAAAAAAAAAAAAEAAgABAAAAA=</HashCode>
+      <FileName>Models\DeviceCharacteristic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Goods">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAgAAAAAACAgAAAAAgAAAAAAAAAAAIEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Goods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Manufacture">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAgAAAAA=</HashCode>
+      <FileName>Models\Manufacture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.Order">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAAAAAAAAAAAwAAAAAQAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.People.Adress">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAIAAAQAAAAAAAAAAAAAAYAAAAAAAA=</HashCode>
+      <FileName>Models\People\Adress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ComputerOnlineStorage.Models.People.Buyer">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEgAACAAAAAAAAAAAAAAAQgAAEAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\People\Buyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
